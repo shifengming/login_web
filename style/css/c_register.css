@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+.c_container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background: url(https://u.fxeye.com/Content/images/login_bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.c_content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.c_header{
+    padding-top: 36px;
+    height: 50px;
+}
+.c_header .c_logo{
+    width: 162px;
+    float: left;
+}
+.c_header .c_logo img{
+    border: none;
+    vertical-align: middle;
+}
+.c_header .c_demand{
+    float: right;
+}
+.c_header .c_demand ul{
+    list-style: none;
+    
+}
+.c_header .c_demand .c_demands li{
+    float: left;
+    margin-left: 20px;
+    height: 46px;
+    line-height: 45px;
+    background: #f4c830;
+    font-size: 16px;
+    color: #3d1000;
+    text-align: center;
+    border-radius: 23px;
+    padding: 0 22px;
+    min-width: 136px;
+}
+.c_header .c_demand .c_demands li i{
+    margin-right: 10px;
+}
+.c_header .c_demand .c_demands .c_download{
+    float: left;
+}
+.c_header .c_demand .c_demands li .c_icon_phone{
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(https://u.fxeye.com/Content/images/login_icons.png);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position: -57px 0;
+}
+.c_header .c_demand .c_demands .c_return{
+    float: right;
+    background-color: #f0f0f0;
+    padding: 0 10px;
+    width: auto;
+    min-width: 116px;
+    overflow: hidden;
+}
+.c_header .c_demand .c_demands li .c_icon_return{
+    display: inline-block;
+    margin-top: -3px;
+    width: 18px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(https://u.fxeye.com/Content/images/icon_house.png) center no-repeat;
+}
+.c_middle{
+    width: 336px;
+    padding: 15px 50px 55px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 14px 8px #e6e6e6;
+    -webkit-border-radius: 10px;
+}
+.c_middle .c_title{
+    font-size: 16px;
+    color: #282828;
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 1px solid #ebedef;
+}
+.c_middle .c_binding{
+    position: relative;
+}
+.c_middle .c_binding p{
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    padding: 10px 0 14px;
+}
+.c_middle .c_binding .c_txt1{
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 0 12px;
+    border: 1px solid #cccccc;
+    height: 46px;
+    line-height: 46px;
+    -webkit-border-radius: 3px;
+}
+.c_middle .c_binding .c_txt1 .c_left{
+    float: left;
+    cursor: pointer;
+    user-select: none;
+}
+.c_middle .c_binding .c_txt1 .c_left img{
+    width: 32px;
+    height: 21px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.c_middle .c_binding .c_txt1 .c_left span{
+    font-size: 14px;
+    color: #666666;
+    padding: 0 3px;
+}
+.c_middle .c_binding .c_txt1 .c_left i{
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-top: -3px;
+    vertical-align: middle;
+    background: url(https://u.fxeye.com/Content/images/select_areaPointer.png) 0 center no-repeat;
+}
+.c_middle .c_binding .c_txt1 input{
+    max-width: 212px;
+    width: 212px;
+    border: 0;
+    margin-top: 1px;
+    float: right;
+    margin-right: -12px;
+    height: 44px;
+    line-height: 44px;
+    -webkit-border-radius: 3px;
+}
+.c_middle .c_binding .c_txt2{
+    margin-bottom: 20px;
+}
+.c_middle .c_binding .c_txt2 input{
+    width: 150px;
+    padding: 0 20px;
+    border: 1px solid #cccccc;
+    height: 44px;
+    line-height: 44px;
+    -webkit-border-radius: 3px;
+}
+.c_middle .c_binding .c_txt2 button{
+    font-size: 14px;
+    color: #333333;
+    width: 135px;
+    float: right;
+    line-height: normal;
+    outline: none;
+    border: 0;
+    box-sizing: content-box;
+}
+.c_middle .c_binding .c_txt2 .c_right{
+    height: 46px;
+    background: #f0f0f0;
+    text-align: center;
+    border-radius: 3px;
+    cursor: not-allowed;
+}
+.c_middle .c_binding .c_txt3  button{
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    border: 0;
+    box-sizing: content-box;
+}

@@ -1,0 +1,411 @@
+/**
+ * @Name     pc样式初始化
+ * @Author   zzc452@163.com
+ * @DateTime 2018-11-20
+ */
+ @charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+html {
+    font-size: 14px;
+    color: #333333;
+    font-family: "Microsoft YaHei";
+}
+
+body {
+    background: #f2f5f8;
+    min-width: 1200px;
+}
+ 
+ol, ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ 
+img {
+    border: none;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+ 
+a {
+    text-decoration: none;
+    outline: none;
+}
+ 
+a:active {
+    outline: none;
+    text-align: none;
+}
+ 
+.clear:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    line-height: 0
+}
+ 
+ /*清除浮动，兼容ie6/7*/
+.clear {
+    *zoom: 1
+}
+
+.col-l {
+    float: left;
+}
+
+.col-r {
+    float: right;
+}
+ 
+.inline-block {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+ 
+/*设置行内块，兼容ie6/7*/
+em, i {
+    font-style: normal;
+}
+ 
+input, button {
+    outline: none;
+    border: 0;
+    box-sizing: content-box;
+}
+ 
+textarea {
+    outline: none;
+    border: 0;
+    resize: none;
+}
+ 
+/* 设置placeholder默认颜色 */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+    opacity: 1;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ccc;
+}
+.area-code-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 450px;
+    height: 650px;
+    background: #fff;
+    border-radius: 5px;
+    margin-left: -225px;
+    margin-top: -325px;
+}
+.area-code-box .area-code-nav {
+    float: left;
+    width: 24px;
+    height: 650px;
+    text-align: center;
+    border-right: 1px solid #eeeeee;
+}
+.area-code-box .area-code-nav ul {
+    padding-top: 44px;
+}
+.area-code-box .area-code-nav li {
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+}
+.area-code-box .area-code-nav li.on {
+    background: #ffe795;
+}
+
+.area-code-box .area-code-nav li:hover {
+    background: #ffe795;
+}
+.area-code-content {
+    width: 450px;
+}
+.area-code-content .area-code-titlt {
+    height: 47px;
+    line-height: 47px;
+}
+.area-code-content .area-code-titlt .btn-close {
+    float: right;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 26px;
+    color: #666;
+}
+.area-code-content .area-code-body {
+    height: 600px;
+    overflow-y: scroll;
+}
+.area-code-content .area-code-body dd {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 13px 0 15px;
+    font-size: 12px;
+    color: #333333;
+    cursor: pointer;
+}
+.area-code-content .area-code-body dd.on {
+    background: #ffe795;
+}
+.area-code-content .area-code-body dd:hover {
+    background: #ffe795;
+}
+.area-code-content .area-code-body dd img {
+    width: 31px;
+    height: 19px;
+    margin-right: 8px;
+}
+.area-code-content .area-code-body dt {
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #999999;
+    margin-left: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+.area-code-content .recommend-code dd {
+    background: #f7f7fb;
+}
+.area-code-content .recommend-code dd i {
+    float: right;
+    color: #f4cf5a;
+}
+.login-btn-box p a {
+    font-size: 14px;
+    color: #999999;
+}
+.login-btn-box p a:hover {
+    color: #f4c830;
+}
+.login-btn-box p a.forget:hover {
+    color: #999999;
+}
+.login-btn-box p a.forget:hover span {
+    color: #0974bc !important;
+}
+    /* 错误提示样式 */
+.error-alert {
+    padding: 6px 18px 6px 38px;
+    position: relative;
+    line-height: 16px;
+    background: #ffe5e4;
+    border: 1px solid #d46f17;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.error-alert .icon-error {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -8px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    /* background: url(../images/icon_error.png) center no-repeat; */
+}
+
+.error-alert span {
+    font-size: 12px;
+    color: #282a29;
+    display: inline-block;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+/* 激活账户 */
+.active-count-box input {
+    margin-bottom: 20px;
+    width: 296px;
+    font-size: 14px;
+    padding: 0 20px;
+    border: 1px solid #cccccc;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.login-content {
+    position: relative;
+}
+
+.login-content p {
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    padding: 10px 0 14px;
+}
+
+.login-content input {
+    border: 1px solid #cccccc;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.login-content .form-control {
+    margin-bottom: 20px;
+}
+
+.login-content .input-control input {
+    width: 294px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.login-btn-box button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.button-btn:hover {
+    background: #ffdd67;
+}
+
+.button-btn {
+    height: 46px;
+    line-height: 46px;
+    background: #f4c831;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3d1000;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.perfect-information .person-control {
+    _zoom: 1;
+}
+
+.perfect-information .person-control input {
+    width: 110px;
+    padding: 0 20px;
+}
+.perfect-information .person-control .sex-select {
+    cursor: pointer;
+    float: right;
+    border: 1px solid #cccccc;
+    width: 146px;
+    padding-left: 20px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #cccccc;
+    background: url('https://u.fxeye.com/Content/images/select_pointer.png') right 10px center no-repeat;
+    position: relative;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.perfect-information .person-control span {
+    color: #cccccc;
+}
+
+.perfect-information .person-control .has-select {
+    color: #333;
+}
+
+.perfect-information .person-control .sex-select ul {
+    cursor: pointer;
+    background: #fff;
+    position: absolute;
+    left: -1px;
+    top: 44px;
+    border: 1px solid #f4c831;
+    width: 166px;
+    font-size: 14px;
+    color: #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.perfect-information .person-control .sex-select li {
+    height: 44px;
+    width: 146px;
+    padding-left: 20px;
+    color: #333333;
+}
+
+.perfect-information .person-control .sex-select li:hover {
+    background: #fff9e5;
+    color: #f4c831;
+}
+
+.perfect-information .person-control .sex-select li.select {
+    background: #fff9e5;
+    color: #f4c831;
+}
+.hq_code {
+    height: 46px;
+    line-height: 46px;
+    background: #f0f0f0;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+    border-radius: 3px;
+    width: 115px;
+    float: right;
+    cursor: not-allowed;
+}
+.code-control input {
+    width: 150px;
+    padding: 0 20px;
+}
+.code-control button {
+    font-size: 14px;
+    color: #333333;
+    width: 135px;
+    float: right;
+    line-height: normal;
+}

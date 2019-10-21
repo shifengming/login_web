@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+.c_container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background: url(https://u.fxeye.com/Content/images/login_bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.c_content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.c_header{
+    padding-top: 36px;
+    height: 50px;
+}
+.c_header .c_logo{
+    width: 162px;
+    float: left;
+}
+.c_header .c_logo img{
+    border: none;
+    vertical-align: middle;
+}
+.c_header .c_demand{
+    float: right;
+}
+.c_header .c_demand ul{
+    list-style: none;
+    
+}
+.c_header .c_demand .c_demands li{
+    float: left;
+    margin-left: 20px;
+    height: 46px;
+    line-height: 45px;
+    background: #f4c830;
+    font-size: 16px;
+    color: #3d1000;
+    text-align: center;
+    border-radius: 23px;
+    padding: 0 22px;
+    min-width: 136px;
+}
+.c_header .c_demand .c_demands li i{
+    margin-right: 10px;
+}
+.c_header .c_demand .c_demands .c_download{
+    float: left;
+}
+.c_header .c_demand .c_demands li .c_icon_phone{
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(https://u.fxeye.com/Content/images/login_icons.png);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position: -57px 0;
+}
+.c_header .c_demand .c_demands .c_return{
+    float: right;
+    background-color: #f0f0f0;
+    padding: 0 10px;
+    width: auto;
+    min-width: 116px;
+    overflow: hidden;
+}
+.c_header .c_demand .c_demands li .c_icon_return{
+    display: inline-block;
+    margin-top: -3px;
+    width: 18px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(https://u.fxeye.com/Content/images/icon_house.png) center no-repeat;
+}
+.c_middle{
+    width: 336px;
+    padding: 15px 50px 55px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 14px 8px #e6e6e6;
+    -webkit-border-radius: 10px;
+}
+.c_middle .c_title{
+    font-size: 16px;
+    color: #282828;
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 1px solid #ebedef;
+}
+.c_middle .c_title span{
+    display: inline-block;
+    height: 64px;
+    padding-right: 5px;
+    border-bottom: 2px solid #282828;
+}
+.c_middle .c_other{
+    font-size: 0;
+    margin: 0 -8px;
+}
+.c_middle .c_other p{
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    padding: 18px 0;
+}
+.c_middle .c_other a{
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    width: 160px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 8px 10px;
+    -webkit-border-radius: 3px;
+}
+.c_middle .c_other a i{
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    margin-left: 16px;
+    vertical-align: middle;
+    background-image: url(https://u.fxeye.com/Content/images/login_icons.png);
+    background-repeat: no-repeat;
+    font-style: normal;
+}
+.c_middle .c_other .c_weixin{
+    background: #40b839;
+}
+.c_middle .c_other .c_qq{
+    background: #2f83ed;
+}
+.c_middle .c_other .c_facebook{
+    background: #435b95;
+}
+.c_middle .c_other .c_twitter{
+    background: #00aced;
+}
+.c_middle .c_other .c_weixin i{
+    background-position: 0 -47px;
+}
+.c_middle .c_other .c_qq i{
+    background-position: -55px -47px;
+}
+.c_middle .c_other .c_facebook i{
+    background-position: 0 -94px;
+}
+.c_middle .c_other .c_twitter i{
+    background-position: -55px -94px;
+}
+
+.c_middle .c_other a span{
+    display: inline-block;
+    width: 98px;
+    text-align: center;
+}
+.c_middle .c_password{
+    position: relative;
+}
+.c_middle .c_password p{
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    padding: 10px 0 14px;
+}
+.c_middle .c_password input{
+    margin-bottom: 20px;
+    width: 296px;
+    font-size: 14px;
+    padding: 0 20px;
+    border: 1px solid #cccccc;
+    height: 44px;
+    line-height: 44px;
+    -webkit-border-radius: 3px;
+}
+.c_middle .c_sure button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+/* .c_middle .c_sure .c_txt1{
+    height: 46px;
+    line-height: 46px;
+    background: #f4c831;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3d1000;
+    -webkit-border-radius: 3px;
+    outline: none;
+    border: 0;
+    box-sizing: content-box;
+} */
+.button-btn:hover {
+	background: #ffdd67;
+}
+
+.button-btn {
+	height: 46px;
+	line-height: 46px;
+	background: #f4c831;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	color: #3d1000;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+.c_middle .c_sure p a{
+    font-size: 14px;
+    color: #999999;
+}
+.c_middle .c_sure p .c_quick{
+    float: left;
+}
+.c_middle .c_sure p .c_forget{
+    float: right;
+}

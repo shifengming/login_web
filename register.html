@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/css/c_register.css">
+    <link rel="stylesheet" href="./style/css/c_reset.css">
+</head>
+<body>
+    <div class="c_container">
+        <div class="c_content">
+            <!-- 头部部分 -->
+            <div class="c_header">
+                <!-- 左上角logo -->
+                <div class="c_logo">
+                    <img src="https://u.fxeye.com/Content/images/erlogo.png" alt="logo">
+                </div>
+                <!-- 右上角APP下载和返回首页 -->
+                <div class="c_demand">
+                    <ul class="c_demands">
+                        <!-- App下载 -->
+                        <li class="c_download">
+                            <i class="c_icon_phone"></i>
+                            APP下载
+                        </li>
+                        <!-- 返回首页 -->
+                        <li class="c_return">
+                            <i class="c_icon_return"></i>
+                            返回首页
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 中间注册部分 -->
+            <div class="c_middle" style="margin-top: 37.5px; margin-left: auto; margin-right: auto;">
+                <h2 class="c_title">
+                    <span>注册</span>
+                </h2>
+                <!-- 注册内容部分 -->
+                <div class="c_binding">
+                    <p>绑定手机号</p>
+                    <!-- 请输入手机号 -->
+                    <div class="c_txt1">
+                        <div class="c_left select-area-code">
+                            <img src="https://img.wikifx.com/flag/7d8833382673bab2/CN.png_wiki-template-global" alt="flag">
+                            <span id="countryCode">0086</span>
+                            <i class="c_pointer"></i>
+                        </div>
+                        <input class="c_right j-phone" type="text" placeholder="请输入手机号" autocomplete="off">
+                    </div>
+                    <!-- 验证码 -->
+                    <div class="c_txt2">
+                        <!-- <input class="c_left" type="text" placeholder="验证码" autocomplete="new-password"> -->
+                        <!-- <button class="c_right">验证码</button> -->
+                        <div class="form-control code-control">
+                            <input id="id-676947" class="j-code" type="text" placeholder="验证码" autocomplete="new-password">
+                            <input id="id-542052" type="text" style="display:none;" class="j-username" autocomplete="off">
+                            <button id="coderadn" class="hq_code" style="display: block;">验证码</button>
+                            <span class="hq_code" id="cutdown" data-diff="59" style="display: none;">已结束</span>
+                        </div>
+                    </div>
+                    <!-- 下一步 -->
+                    <div class="c_txt3">
+                        <button class="button-btn" id="btn_post_step1">下一步</button>
+                    </div>
+                </div>
+                <!-- 设置密码 -->
+                <div class="quick-login-step step2">
+                    <div class="active-count-box login-content">
+                        <p>设置密码</p>
+                        <input id="id-477875" name="password" class="j-Password" type="text" onfocus="this.type='password'" placeholder="设置密码" autocomplete="off">
+                        <input id="id-210622" name="password" class="j-Password2" type="text" onfocus="this.type='password'" placeholder="请再输入一遍密码" autocomplete="off">
+                    </div>
+                    <!-- 下一步 -->
+                    <div class="login-btn-box">
+                        <button id="btn_post_step2" class="button-btn next-step" next-step="step3">下一步</button>
+                    </div>
+                </div>
+                <!-- 完善资料 -->
+                <div class="quick-login-step step3">
+                    <div class="perfect-information login-content">
+                        <p>完善资料</p>
+                        <div class="form-control person-control">
+                            <input id="LastName" type="text" placeholder="请输入姓氏" autocomplete="off">
+                            <div class="sex-select">
+                                <span>性别</span>
+                                <ul style="display: none;">
+                                    <li data-value="1">先生</li>
+                                    <li data-value="0">女士</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-control input-control">
+                            <input id="id-671983" class="j-email" type="text" placeholder="请输入邮箱" autocomplete="off">
+                        </div>
+                    </div>
+                    <p class="error-alert" style="display:none;">
+                        <i class="icon-error"></i>
+                        <span id="errormsg"></span>
+                    </p>
+                    <!-- 完成 -->
+                    <div class="login-btn-box">
+                        <button id="btn_post_step3" class="button-btn">完成</button>
+                        <p class="center">
+                            <a class="forget" href="//www.fxeye.com/Terms.html" target="_blank">点击“完成”即表示您同意 《外汇天眼服务协议》</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./style/js/layui/layui.all.js"></script>
+<script src="https://u.fxeye.com/Content/js/countryFlag/countryFlagBase64_cn.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://u.fxeye.com/Content/layer/jquery.countdown.js?v=0.10.10"></script>
+<script src="https://u.fxeye.com/Content/js/lodash/lodash.custom-3.1.0.min.js"></script>
+<script src="https://u.fxeye.com/Content/js/lodash/loadsh.config.js?v=0.10.10"></script>
+<script src="./style/js/c_com.js"></script>
+<!-- <script src="https://u.fxeye.com/Content/js/main2.js?v=0.10.10"></script> -->
+<script>
+    function next1() {
+        var areacode = _.trim($("#countryCode").text());
+        var phone = _.trim($(".j-phone").val());
+        var code = _.trim($(".j-code").val());
+
+        if ($.trim(phone) == "") {
+            $.FX.alert("请输入手机号", ".j-phone");
+            return false;
+        }
+        else if (!$.FX.isMobile(phone)) {
+            $.FX.alert("_S000027", ".j-phone");
+            return false;
+        }
+
+        if ($.trim(code) == "") {
+            $.FX.alert("请输入验证码", ".j-code");
+            return false;
+        }
+	}
+    //点击选择国家
+	$(document).on('click', '.select-area-code', function (event) {
+		if ($(this).attr("needClick") == "0") {
+			return false;
+		}
+		else {
+			countryList("0086", function (result) {
+
+				$(".select-area-code").find("img").attr("src", result.flag);
+				$(".select-area-code").find("span").html(result.areaCode);
+			});
+		}
+	});
+    //获取验证码
+	function getcode() {
+		var areacode = $("#countryCode").text();
+		var phone = _.trim($('.j-phone').val());
+        console.log(areacode)
+        console.log(phone)
+		if ($.trim(phone) == '') {
+			$.FX.alert(fx_tishi("请输入手机号"), ".j-phone");
+			return false;
+		}
+		else if (!$.FX.isMobile(phone)) {
+			$.FX.alert(fx_tishi("_S000027"), ".j-phone");
+			return false;
+		}
+		$("#coderadn").removeClass("button-btn").addClass("hq_code");
+		$.FX.Ajax("https://u.fxeye.com/cn_zh-cn/Member/SendMessageCode", { AreaCode: areacode, phone: phone, type: "register" }, function (ret) {
+			if (ret.Status === 1) {
+				cutdowns();
+				$(".j-code").focus();
+				if ($("#RequestId").length > 0 && ret.RequestId != null && ret.RequestId != "") {
+					$("#RequestId").val(ret.RequestId);
+				}
+			}
+			else {
+				$.FX.alert(fx_tishi(ret.data.Message), ".j-phone");
+				$("#coderadn").addClass("button-btn").removeClass("hq_code");
+			}
+		});
+    }
+    //监听用户输入手机号
+	$(".j-phone").bind("input propertychange", function (event) {
+		if ($.FX.Mobile(_.trim($("#countryCode").text()), _.trim($(this).val()))) {
+			$("#coderadn").addClass("button-btn").removeClass("hq_code");
+		} else {
+			$("#coderadn").removeClass("button-btn").addClass("hq_code");
+		}
+		$('#btn_skip').hide();
+    });
+    //注册第一步,下一步按钮
+    console.log(loadsh)
+	$("#btn_post_step1").click(_.debounce(next1, loadsh.bounce, loadsh.decounceconfig));
+	$.FX.enter(".j-code", _.debounce(next1, loadsh.bounce, loadsh.decounceconfig));
+    //获取验证码
+	$("#coderadn").click(_.debounce(getcode, loadsh.bounce, loadsh.decounceconfig));
+	$.FX.enter(".j-phone", _.debounce(getcode, loadsh.bounce, loadsh.decounceconfig));
+    // 选择性别，模拟下拉
+	$(document).on("click", ".sex-select", function (e) {
+		if (document.all) {
+			e = window.event;
+			e.cancelBubble = true;
+		} else {
+			e.stopPropagation();
+		}
+		$(this).find("ul").toggle();
+	});
+    $(document).on("click", ".sex-select li", function (e) {
+		if (document.all) {
+			e = window.event;
+			e.cancelBubble = true;
+		} else {
+			e.stopPropagation();
+		}
+		var self = $(this);
+		self.addClass("select").siblings("li").removeClass("select");
+		self.parents(".sex-select").find("span").addClass("has-select").html(self.html().trim());
+		self.parent().hide();
+	});
+
+	$(document).on('click', 'body', function (e) {
+		if (!$('.sex-select ul').is(":visible")) return;
+		$('.sex-select ul').hide();
+	});
+</script>
+</html>
